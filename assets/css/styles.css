@@ -1,0 +1,28 @@
+* {
+  border: 1px solid red;
+}
+
+body {
+  font-family: helvetica;
+}
+
+body li {
+  list-style-type: none;
+}
+
+nav {
+  z-index: 1030;
+  height: 150px;
+  background-image: url("../img/bg2.jpg");
+  background-size: 100% 150px;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+nav .nav-logo {
+  font-style: italic;
+  font-size: 1.1em;
+  background: -webkit-gradient(linear, left top, right top, from(black), to(transparent));
+  background: linear-gradient(to right, black, transparent);
+}
+/*# sourceMappingURL=styles.css.map */

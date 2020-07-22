@@ -1,0 +1,26 @@
+
+$zindex-fixed:             1030 !default;
+$nav-height: 150px;
+
+* {
+  border: 1px solid red;
+}
+body {
+  font-family: helvetica;
+  li {
+    list-style-type: none;
+  }
+}
+nav {
+  z-index: $zindex-fixed;
+  height: $nav-height;
+  background-image: url("../img/bg2.jpg");
+  background-size: 100% $nav-height;
+  background-repeat: no-repeat;
+  color: white;
+  .nav-logo {
+    font-style: italic;
+    font-size: 1.1em;
+    background: linear-gradient(to right, black, transparent);
+  }
+}
