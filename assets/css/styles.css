@@ -1,7 +1,3 @@
-* {
-  border: 1px solid red;
-}
-
 body {
   font-family: helvetica;
 }
@@ -24,5 +20,119 @@ nav .nav-logo {
   font-size: 1.1em;
   background: -webkit-gradient(linear, left top, right top, from(black), to(transparent));
   background: linear-gradient(to right, black, transparent);
+}
+
+.chapter {
+  position: relative;
+  width: 100%;
+  color: #003366;
+  font-size: 1.5rem;
+  padding: 5px 0 5px 50px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(100, 200, 200, 0.5)), to(transparent));
+  background: linear-gradient(to right, rgba(100, 200, 200, 0.5), transparent);
+}
+
+.chapter:after {
+  content: '';
+  border: 20px solid transparent;
+  border-top: 39px solid rgba(100, 200, 200, 0.5);
+  border-right: 0 solid rgba(100, 200, 200, 0.5);
+  position: absolute;
+  top: 0px;
+  left: -20px;
+}
+
+.experience-item h3 {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.experience-item li {
+  padding-bottom: 20px;
+}
+
+.experience-separator {
+  width: 2px;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(#003366), to(transparent));
+  background: linear-gradient(to top, transparent, #003366, transparent);
+  margin: 0;
+  height: 100%;
+}
+
+.experience-separator-horizontal {
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#003366), to(transparent));
+  background: linear-gradient(to right, transparent, #003366, transparent);
+  margin: 0;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.diplom {
+  width: 80%;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  max-height: 150px;
+  width: auto;
+}
+
+footer {
+  height: 150px;
+  background-image: url(../img/bg3.png);
+  background-color: #003366;
+  background-position: 100% 0;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  color: #f2f7f4;
+  width: 100%;
+  margin: 20px 0 0;
+  padding: 20px 0;
+}
+
+.contacts {
+  color: white;
+}
+
+.contacts a {
+  color: white;
+}
+
+.contacts img {
+  width: 1.5em;
+}
+
+.contacts h2 {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.projects .projects-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 150px;
+  margin: 20px;
+  padding: 0;
+}
+
+.projects span {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.projects img {
+  max-width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
