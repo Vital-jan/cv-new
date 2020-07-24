@@ -135,4 +135,19 @@ footer {
 .projects img {
   max-width: 100%;
 }
+
+.code-example div {
+  height: 90px;
+  overflow: hidden;
+  margin: 40px 5px;
+  width: 360px;
+  border: 1px solid #b6b4b4;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+}
+
+.code-example img {
+  position: absolute;
+}
 /*# sourceMappingURL=styles.css.map */

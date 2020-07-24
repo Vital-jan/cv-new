@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <nav class="container-fluid d-flex align-items-center pl-0 pr-0">
+  <nav class="container-fluid d-flex align-items-center pl-0 pr-0 position-fixed">
       <ul class="col-xl-3 col-lg-3 col-md-4 col-sm-8 col-10 nav-logo">
         <li>Віталій Коломієць</li>
         <li>junior frontend developer</li>
@@ -118,6 +118,26 @@
     <h2 class="chapter">
       Про мене
     </h2>
+    <p>
+      Програмуванням захоплююсь з юнацьких років. Мав досвід створення додатків мовами assembler, turbo-pascal. Працюючи в ун-ті ім.Шевченка, окрім іншого, створив програмний комплекс для вводу, відображення та друку кирилічних шрифтів та математичних символів
+    </p>
+    <div class="row mx-0 d-flex justify-content-center code-example">
+      <div id="roll1">
+        <img src="assets/img/pas1.jpg" alt="">
+      </div>
+      <div id="roll2">
+        <img src="assets/img/asm1.jpg" alt="">
+      </div>
+    </div>
+    <p>
+      Пізніше, працюючи у сфері продажів, створив систему обліку та CRM, яку впровадив у 4-х торговельних та виробничих компаніях.
+    </p>
+    <p>
+      Війна змусила мене змінити життєві плани. Перерва в трудовій біографії значно ускладнила повернення до попередньої фахової діяльності. Було прийняте рішення поновити знання та повернутись до it сфери в якості frontend розробника.
+    </p>
+    <p>
+      Бажаю знайти своє місце в команді професіоналів, підвищити рівень кваліфікації, здобути нових знань.
+    </p>
     <div class="row">
       <div class="col-12 d-flex justify-content-center">
         <a href="cv_vital.pdf" download="">
@@ -154,5 +174,16 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script>
+    let position1 = 0, position2 = 0; // прокручування зображень коду
+    let roll1 = document.querySelector('#roll1 img');
+    let roll2 = document.querySelector('#roll2 img');
+    let interval = setInterval(function(){ 
+        if (position1 > -1374) {position1--} else position1 = 0;
+        if (position2 > -643) {position2--} else position2 = 0;
+        roll1.style.top = `${position1}px`;
+        roll2.style.top = `${position2}px`;
+    }, 50);
+  </script>
 </body>
 </html>
