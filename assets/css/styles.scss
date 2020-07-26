@@ -1,5 +1,11 @@
 
+$zindex-dropdown:          1000 !default;
+$zindex-sticky:            1020 !default;
 $zindex-fixed:             1030 !default;
+$zindex-modal-backdrop:    1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
 $nav-height: 150px;
 
 * {
@@ -139,4 +145,27 @@ footer {
 }
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e")
+}
+.modal-content {
+  background: linear-gradient(to bottom right, rgb(0, 51, 102), rgb(100, 200, 200));
+  color: white;
+}
+.text-center {
+  width: 100%;
+}
+.toast {
+  position: fixed;
+  top: 50vh;
+  left: 0;
+  right: 0;
+  margin:  0 auto;
+  z-index: $zindex-modal;
+}
+.form-check-input {
+  margin-left: 0;
+  position: relative;
+}
+label {
+  cursor: pointer;
+  display: block;
 }

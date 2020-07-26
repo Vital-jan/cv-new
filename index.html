@@ -1,19 +1,117 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta http-equiv="pragma" content="no-cache">
-<meta http-equiv="cache-control" content="no-cache">
-<meta name="description" content="CV">
-<meta name="author" content="Vitalii Kolomiiets, Kyiv, Ukraine, vitaljan@gmail.com">
-<title></title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta name="description" content="CV">
+  <meta name="author" content="Vitalii Kolomiiets, Kyiv, Ukraine, vitaljan@gmail.com">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+  <!-- modal invite -->
+  <div id="invite" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center">Запрошення на співбесіду</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="text-center">
+            Ваше запрошення буде надіслано на мій email. Зв'яжусь з Вами за першої можливості. Дякую.
+          </p>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Ваше ім'я:"/>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Ваша компанія:">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Ваші контакти:">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Повідомлення:"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="invite-btn" type="button" class="btn btn-warning" data-dismiss="modal">Запросити</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal feedback -->
+  <div id="feedback" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Зворотній зв'язок</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="text-center">
+            Ваші зауваження дуже стануть мені у нагоді. Дякую.
+          </p>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Ваша компанія:">
+            </div>
+            <div class="form-group">
+              <label class="form-check-label" >
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                Бракує загального досвіду в it
+              </label>
+              <label class="form-check-label" >
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                Бракує знань React JS
+              </label>
+              <label class="form-check-label" >
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                Бракує знань Vue JS
+              </label>
+              <label class="form-check-label" >
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                Бракує досвіду роботи з CMS
+              </label>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Додатково:"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="feedback-btn" type="button" class="btn btn-warning" data-dismiss="modal">Надіслати</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- pop-up invite -->
+  <div id="popup-invite" class="toast" data-delay="2000">
+    <div class="toast-header">
+      <strong class="mr-auto">
+        Повідомлення надіслане
+      </strong>
+      <img src="assets/img/like.png" class="rounded mr-2" alt="...">
+      <!-- <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+    </div>
+    <!-- <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div> -->
+  </div>
+
   <nav class="container-fluid d-flex align-items-center pl-0 pr-0 position-fixed">
       <ul class="col-xl-3 col-lg-3 col-md-4 col-sm-8 col-10 nav-logo">
         <li>Віталій Коломієць</li>
@@ -33,7 +131,7 @@
           </li>
           <li>
             <h3>Маю досвід використання:</h3>
-            PHP, Python/Djangoo, MySQL, PostgreSQL, Jquery, Bootstrap, Tailwindcss, Fetch, Axios, Linux Ubuntu, Github, Slack, VS code, Trello, Gira, PhotoGimp
+            PHP, Python/Djangoo, MySQL, PostgreSQL, Jquery, Bootstrap, Tailwindcss, Fetch, Axios, ESLint, Linux Ubuntu, Github, Slack, VS code, Trello, Gira, PhotoGimp
           </li>
           <li>
             <h3>Вивчаю:</h3>
@@ -111,7 +209,7 @@
         <div class="projects-item">
           <a href="http://explorer.org.ua/cv" target="blanc"><img src="assets/img/project05.png" alt="">
           </a>
-          <span>JS, JQuery, Bootstrap, SASS</span>
+          <span>PHP, JS, Bootstrap, SASS</span>
         </div>
       </div>
     </div>
@@ -119,7 +217,7 @@
       Про мене
     </h2>
     <p>
-      Програмуванням захоплююсь з юнацьких років. Мав досвід створення додатків мовами assembler, turbo-pascal. Працюючи в ун-ті ім.Шевченка, окрім іншого, створив програмний комплекс для вводу, відображення та друку кирилічних шрифтів та математичних символів
+      Програмуванням захоплююсь з юнацьких років. Мав досвід створення додатків мовами assembler, turbo-pascal. Працюючи в ун-ті ім.Шевченка, окрім іншого, створив програмний комплекс для вводу, відображення та друку кирилічних шрифтів та математичних символів.
     </p>
     <div class="row mx-0 d-flex justify-content-center code-example">
       <div id="roll1">
@@ -130,7 +228,7 @@
       </div>
     </div>
     <p>
-      Пізніше, працюючи у сфері продажів, створив систему обліку та CRM, яку впровадив у 4-х торговельних та виробничих компаніях.
+      Пізніше, працюючи вже у сфері продажів, створив систему обліку та CRM (MS Access, VBA), яку впровадив у 4-х торговельних та виробничих компаніях:
     </p>
     <div id="slider" class="carousel slide col-10 col-md-6 mx-auto mb-5" data-ride="carousel">
       <div class="carousel-inner">
@@ -176,7 +274,7 @@
       Бажаю знайти своє місце в команді професіоналів, підвищити рівень кваліфікації, здобути нових знань.
     </p>
     <div class="row">
-      <div class="col-12 d-flex justify-content-center">
+      <div class="col-12 d-flex justify-content-center my-5">
         <a href="cv_vital.pdf" download="">
           <img src="assets/img/pdf.png" alt="">
         </a>
@@ -184,8 +282,8 @@
     </div>
     <div class="row">
       <div class="col-12 py-4 d-flex justify-content-center">
-        <button type="button" class="btn btn-warning mx-1">Запросити на співбесіду</button>
-        <button type="button" class="btn btn-info mx-1">Зворотній зв'язок</button>
+        <button type="button" class="btn btn-warning mx-1" data-toggle="modal" data-target="#invite">Запросити на співбесіду</button>
+        <button type="button" class="btn btn-info mx-1" data-target="#feedback" data-toggle="modal" data-toggle="tooltip" data-placement="bottom" title="Якщо Ви не готові запросити мене на співбесіду, зазначте, будь ласка, причини">Зворотній зв'язок</button>
       </div>
     </div>
   </main>
@@ -211,7 +309,9 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="api/mysqlajax.js"></script>
   <script>
+    // rolling elements
     let position1 = 0, position2 = 0; // прокручування зображень коду
     let roll1 = document.querySelector('#roll1 img');
     let roll2 = document.querySelector('#roll2 img');
@@ -221,6 +321,14 @@
         roll1.style.top = `${position1}px`;
         roll2.style.top = `${position2}px`;
     }, 50);
+    // modal buttons
+    document.querySelector('#invite-btn').addEventListener('click', (event)=>{
+      $("#popup-invite").toast('show')
+    })
+    document.querySelector('#feedback-btn').addEventListener('click', (event)=>{
+      $("#popup-invite").toast('show')
+    })
+
   </script>
 </body>
 </html>
