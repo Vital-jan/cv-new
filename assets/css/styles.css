@@ -236,12 +236,13 @@ label input {
 }
 
 .nav-link:hover {
-  border-bottom: 4px solid rgba(248, 248, 244, 0.3) !important;
+  border-bottom: 1px solid rgba(248, 248, 244, 0.3) !important;
 }
 
 .nav-link.active {
-  border-bottom: 4px solid transparent !important;
-  background-color: rgba(0, 123, 255, 0.8) !important;
+  border-bottom: 4px solid rgba(248, 248, 244, 0.3) !important;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 123, 255, 0.3)), to(rgba(2, 18, 34, 0.6))) !important;
+  background-image: linear-gradient(to right, rgba(0, 123, 255, 0.3), rgba(2, 18, 34, 0.6)) !important;
 }
 
 @-webkit-keyframes mymove {
