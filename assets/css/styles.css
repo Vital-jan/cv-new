@@ -1,5 +1,11 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 170px;
+}
+
 body {
   font-family: helvetica;
+  height: 100%;
 }
 
 body li {
@@ -157,6 +163,20 @@ footer {
   position: absolute;
 }
 
+.diplom-zoom {
+  max-width: 100%;
+  display: none;
+  position: absolute;
+  z-index: 1070;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+  left: 0;
+  right: 0;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 2px solid gray;
+}
+
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
 }
@@ -192,5 +212,20 @@ footer {
 label {
   cursor: pointer;
   display: block;
+}
+
+label input {
+  cursor: pointer;
+}
+
+.navbar-collapse {
+  font-style: italic;
+  font-size: 1.1em;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(black));
+  background: linear-gradient(to right, transparent, black);
+}
+
+.navbar-collapse * {
+  color: white !important;
 }
 /*# sourceMappingURL=styles.css.map */

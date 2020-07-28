@@ -13,7 +13,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar" data-offset="250">
   <!-- modal invite -->
   <div id="invite" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog">
@@ -28,23 +28,23 @@
           <p class="text-center">
             Ваше запрошення буде надіслано на мій email. Зв'яжусь з Вами за першої можливості. Дякую.
           </p>
-          <form>
+          <form name="forminvite">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Ваше ім'я:"/>
+              <input type="text" class="form-control" placeholder="Ваше ім'я:" name="name">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Ваша компанія:">
+              <input type="text" class="form-control" placeholder="Ваша компанія:" name="company">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Ваші контакти:">
+              <input type="text" class="form-control" id="form-contacts" placeholder="Ваші контакти (обов'язкове поле):" name="contacts">
             </div>
             <div class="form-group">
-              <textarea class="form-control" placeholder="Повідомлення:"></textarea>
+              <textarea class="form-control" placeholder="Повідомлення:" name="text"></textarea>
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button id="invite-btn" type="button" class="btn btn-warning" data-dismiss="modal">Запросити</button>
+          <button id="invite-btn" type="button" disabled="" class="btn btn-warning" data-dismiss="modal">Запросити</button>
         </div>
       </div>
     </div>
@@ -63,30 +63,30 @@
           <p class="text-center">
             Ваші зауваження дуже стануть мені у нагоді. Дякую.
           </p>
-          <form>
+          <form name="formfeedback">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Ваша компанія:">
+              <input type="text" class="form-control" placeholder="Ваша компанія:" name="company">
             </div>
             <div class="form-group">
               <label class="form-check-label" >
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" type="checkbox" data-value="Common experience" id="defaultCheck1">
                 Бракує загального досвіду в it
               </label>
-              <label class="form-check-label" >
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" data-value="React" id="defaultCheck1">
                 Бракує знань React JS
               </label>
               <label class="form-check-label" >
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" type="checkbox" data-value="Vue" id="defaultCheck1">
                 Бракує знань Vue JS
               </label>
               <label class="form-check-label" >
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <input class="form-check-input" type="checkbox" data-value="CMS" id="defaultCheck1">
                 Бракує досвіду роботи з CMS
               </label>
             </div>
             <div class="form-group">
-              <textarea class="form-control" placeholder="Додатково:"></textarea>
+              <textarea class="form-control" placeholder="Додатково:" name="text"></textarea>
             </div>
           </form>
         </div>
@@ -111,15 +111,46 @@
       Hello, world! This is a toast message.
     </div> -->
   </div>
+  <!-- diplom img zoom -->
+  <div>
+    <img id='diplom-zoom' class='diplom-zoom' src='assets/img/diplom.jpg'>
+    <img id='diplom2-zoom' class='diplom-zoom' src='assets/img/diplom2.jpg'>
+  </div>
 
-  <nav class="container-fluid d-flex align-items-center pl-0 pr-0 position-fixed">
+  <nav id="navbar" class="container-fluid d-flex align-items-center pl-0 pr-0 fixed-top justify-content-between">
       <ul class="col-xl-3 col-lg-3 col-md-4 col-sm-8 col-10 nav-logo">
         <li>Віталій Коломієць</li>
         <li>junior frontend developer</li>
       </ul>
+
+      <div class="navbar navbar-expand-lg navbar-light pr-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" href="#experience">Знання</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Проекти</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Про мене</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pdflink">Скачати PDF</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacts">Контакти</a>
+            </li>
+          </ul>
+        </div>
+      </вш>      
   </nav>
   <main class="container pt-5 px-0">
-    <h2 class="chapter">
+    <h2 class="chapter" id="experience">
       Знання та освіта
     </h2>
     <div class="row mx-0 d-flex justify-content-center p-0">
@@ -173,15 +204,15 @@
             <h3>Дипломи, сертифікати:</h3>
           </li>
           <li class="d-flex justify-content-center sm-p-5">
-            <img class="diplom" src="assets/img/diplom.jpg" alt="">
+            <img class="diplom" id="diplom" src="assets/img/diplom.jpg" alt="">
           </li>
           <li class="d-flex justify-content-center sm-p-5">
-            <img class="diplom" src="assets/img/diplom2.jpg" alt="">
+            <img class="diplom" id="diplom2" src="assets/img/diplom2.jpg" alt="">
           </li>
         </ul>
       </div>
     </div>
-    <h2 class="chapter">
+    <h2 class="chapter" id="projects">
       Проекти
     </h2>
     <div class="row p-0 m-0 projects">
@@ -209,11 +240,11 @@
         <div class="projects-item">
           <a href="http://explorer.org.ua/cv" target="blanc"><img src="assets/img/project05.png" alt="">
           </a>
-          <span>PHP, JS, Bootstrap, SASS</span>
+          <span>PHP, JS, Bootstrap, JQuery, SASS</span>
         </div>
       </div>
     </div>
-    <h2 class="chapter">
+    <h2 class="chapter" id="about">
       Про мене
     </h2>
     <p>
@@ -273,7 +304,8 @@
     <p>
       Бажаю знайти своє місце в команді професіоналів, підвищити рівень кваліфікації, здобути нових знань.
     </p>
-    <div class="row">
+    <div class="row my-5 py-5 mx-0" id="pdflink">
+      <p>&nbsp;</p>
       <div class="col-12 d-flex justify-content-center my-5">
         <a href="cv_vital.pdf" download="">
           <img src="assets/img/pdf.png" alt="">
@@ -287,7 +319,7 @@
       </div>
     </div>
   </main>
-  <footer class="container-fluid footer">
+  <footer class="container-fluid footer" id="contacts">
     <ul class="contacts">
       <h2>
         Мої контакти:
@@ -301,18 +333,22 @@
           vitaljan@gmail.com</a>
       </li>
       <li>
+          <img class="phone-icon" src="assets/img/telegram.png">
+          @vital-jan
+      </li>
+      <li>
           <a href="https://github.com/Vital-jan" target="blanc"><img class="phone-icon" src="assets/img/github.png">
             github.com/Vital-jan</a>
       </li>
     </ul>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script src="api/mysqlajax.js"></script>
   <script>
     // rolling elements
-    let position1 = 0, position2 = 0; // прокручування зображень коду
+    let position1 = 0, position2 = 0;
     let roll1 = document.querySelector('#roll1 img');
     let roll2 = document.querySelector('#roll2 img');
     let interval = setInterval(function(){ 
@@ -321,14 +357,52 @@
         roll1.style.top = `${position1}px`;
         roll2.style.top = `${position2}px`;
     }, 50);
+    // form contacts validation
+    document.querySelector('#form-contacts').addEventListener('input', (event)=>{
+      if (event.target.value.length >= 7) {document.querySelector('#invite-btn').removeAttribute('disabled');}
+        else document.querySelector('#invite-btn').setAttribute('disabled', '');
+    })
     // modal buttons
     document.querySelector('#invite-btn').addEventListener('click', (event)=>{
-      $("#popup-invite").toast('show')
+        let msg = 'Запрошення на співбесіду\n\n';
+        msg += 'Ім`я: ' + document.forms.forminvite.name.value;
+        msg += '\nКомпанія: ' + document.forms.forminvite.company.value;
+        msg += '\nКонтакти: ' + document.forms.forminvite.contacts.value;
+        msg += '\n' + document.forms.forminvite.text.value;
+        sendMail ('vitaljan@gmail.com', '+CV+', msg, 'explorer.org.ua/cv', (res)=>{
+            if (res.send) $("#popup-invite").toast('show');
+        }, 'api/');
+      
     })
     document.querySelector('#feedback-btn').addEventListener('click', (event)=>{
-      $("#popup-invite").toast('show')
+      let msg = document.forms.formfeedback.company.value + '\n';
+      let arr = document.forms.formfeedback.querySelectorAll('input:checked');
+      arr.forEach((i)=>{
+        msg += i.dataset.value +'\n';
+      });
+      msg += document.forms.formfeedback.text.value;
+      sendMail ('vitaljan@gmail.com', '-CV-', msg, 'explorer.org.ua/cv', (res)=>{
+        if (res.send) $("#popup-invite").toast('show');
+      }, 'api/');
     })
+    // diplom collapse
+    window.addEventListener('click', (event)=>{
+      document.querySelectorAll('.diplom-zoom').forEach((i)=>{ //diploms collapse
+        $(i).slideUp(300);
+      })
+    })
+    document.querySelectorAll('.diplom').forEach((i)=>{
 
+    i.addEventListener('click', (event)=>{
+      let el;
+      if (event.target.id == 'diplom') el = document.querySelector('#diplom-zoom');
+      if (event.target.id == 'diplom2') el = document.querySelector('#diplom2-zoom');
+      if (!el) return;
+      el.style.top = window.pageYOffset + 'px';
+      $(el).slideDown(500);
+      event.stopPropagation();
+    })
+  })
   </script>
 </body>
 </html>
