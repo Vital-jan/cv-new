@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-  padding-top: 100px;
+  scroll-padding-top: 150px;
+  padding-top: 150px;
 }
 
 body {
@@ -21,6 +21,30 @@ header {
   color: white;
   height: 100px;
   z-index: 1000;
+}
+
+header #header-content {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-style: italic;
+  background: -webkit-gradient(linear, left top, right top, from(black), to(transparent));
+  background: linear-gradient(to right, black, transparent);
+  height: 80%;
+}
+
+header #header-content * {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 575px) {
+  header #header-content {
+    font-size: 0.9em;
+  }
 }
 
 header #explorer-navigation {

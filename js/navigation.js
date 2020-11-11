@@ -1,8 +1,11 @@
-function setNavigation(navMenu) {
+function setNavigation(navMenu, contentHTML = "") {
   // Створення головного меню сайту-------------------
   // navMenu - масив розділів меню вигляду: де кожен елемент складається з назви розділу та внутрішнього посилання на розділ (anchor) ['Про нас#about', 'Міфи та спростування#myth', 'Ознаки намірів#intention', 'Що робити?#whatdo', 'Важливо, щоб ти жив!#iwant', 'Рішення#help', 'Лікарі#psychiatrist', 'Наша команда#team'];
   let header = document.body.appendChild(document.createElement('header'));
   let nav = header.appendChild(document.createElement('nav')); 
+  let content = nav.appendChild(document.createElement('div'));
+  content.id = "header-content";
+  content.innerHTML = contentHTML;
   let smartMenu = header.appendChild(document.createElement('div'));
   let navButton = document.createElement('span'); // створюємо кнопку меню-смартфон
   nav.appendChild(navButton);
