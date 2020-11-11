@@ -1,0 +1,224 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #02061f;
+  color: white;
+  height: 100px;
+  z-index: 1000;
+}
+
+header #explorer-navigation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header #explorer-navigation .hidden {
+  display: none;
+}
+
+header #explorer-navigation .nav-smartmenu-button {
+  display: none;
+  height: 50px;
+  width: 50px;
+  right: 0;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+  header #explorer-navigation .nav-smartmenu-button {
+    display: block;
+  }
+}
+
+header #explorer-navigation #nav-topmenu {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 3px;
+}
+
+@media (max-width: 1150px) {
+  header #explorer-navigation #nav-topmenu {
+    display: none;
+  }
+}
+
+header #explorer-navigation #nav-topmenu a {
+  color: white;
+  font-weight: normal;
+  -webkit-box-shadow: 1px 3px 3px -4px gray;
+          box-shadow: 1px 3px 3px -4px gray;
+  text-decoration: none;
+}
+
+header #explorer-navigation #nav-topmenu span {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+  header #explorer-navigation #nav-topmenu span {
+    font-size: 0.7em;
+  }
+}
+
+header #explorer-navigation .nav-logo {
+  font-style: italic;
+  font-size: 1.1em;
+  background: -webkit-gradient(linear, left top, right top, from(black), to(transparent));
+  background: linear-gradient(to right, black, transparent);
+}
+
+header #explorer-nav-smartmenu {
+  z-index: 1001;
+  width: 40%;
+  display: none;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #02061f;
+  border: 1px solid gray;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 5px 2px gray;
+          box-shadow: 2px 2px 5px 2px gray;
+}
+
+header #explorer-nav-smartmenu ul {
+  padding: 0;
+  margin: 0;
+}
+
+header #explorer-nav-smartmenu ul li {
+  margin: 0;
+  list-style-type: none;
+}
+
+@media (max-width: 768px) {
+  header #explorer-nav-smartmenu {
+    width: 60%;
+  }
+}
+
+header #explorer-nav-smartmenu.nav__smartmenu_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header #explorer-nav-smartmenu .nav__smartmenu__elem {
+  display: inline-block;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  list-style-type: none;
+  text-decoration: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+header #explorer-nav-smartmenu .nav__smartmenu__close {
+  text-align: right;
+  padding-right: 20px;
+  list-style-type: none;
+  color: white;
+}
+
+header #explorer-nav-smartmenu .nav__smartmenu__close span {
+  cursor: pointer;
+}
+
+header #explorer-nav-smartmenu .separator {
+  width: 100%;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(white), to(transparent));
+  background: linear-gradient(to right, white, transparent);
+  margin: 2px 0;
+  list-style-type: none;
+}
+
+.explorer-read-more {
+  max-height: 0;
+  text-align: justify;
+  overflow: hidden;
+  margin-top: 20px;
+  padding: 0 50px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .explorer-read-more {
+    padding: 0 10px;
+    text-align-last: left;
+  }
+}
+
+.explorer-read-more-button {
+  display: block;
+  z-index: 1;
+  top: -10px;
+  background-color: gray;
+  color: white;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  opacity: 0.7;
+  font-style: italic;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.explorer-read-more-button.center {
+  margin: auto;
+}
+
+.explorer-read-more-button.right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.explorer-read-more-button.collapse {
+  display: none;
+  margin-top: 20px;
+  bottom: 0;
+}
+/*# sourceMappingURL=navigation.css.map */
