@@ -59,66 +59,6 @@
       </div>
     </div>
   </div>
-  <!-- modal feedback -->
-  <div id="feedback" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Зворотній зв'язок</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p class="text-center">
-            Ваші зауваження дуже стануть мені у нагоді. Дякую.
-          </p>
-          <form name="formfeedback">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Ваша компанія:" name="company">
-            </div>
-            <div class="form-group">
-              <label class="form-check-label" >
-                <input class="form-check-input" type="checkbox" data-value="Common experience" id="defaultCheck1">
-                Бракує досвіду роботи в it компанії
-              </label>
-              <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" data-value="Framework" id="defaultCheck1">
-                Бракує знань React JS (Vue JS)
-              </label>
-              <label class="form-check-label" >
-                <input class="form-check-input" type="checkbox" data-value="Webpack" id="defaultCheck1">
-                Бракує досвіду роботи з Webpack (Gulp)
-              </label>
-              <label class="form-check-label" >
-                <input class="form-check-input" type="checkbox" data-value="English" id="defaultCheck1">
-                Бракує знань English (A2 level)
-              </label>
-              <label class="form-check-label" >
-                <input class="form-check-input" type="checkbox" data-value="CMS" id="defaultCheck1">
-                Бракує досвіду роботи з CMS (WP, Opencart)
-              </label>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" placeholder="Додатково:" name="text"></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button id="feedback-btn" type="button" class="btn btn-warning" data-dismiss="modal">Надіслати</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- pop-up invite -->
-  <div id="popup-invite" class="toast" data-delay="2000">
-    <div class="toast-header">
-      <strong class="mr-auto">
-        Повідомлення надіслане
-      </strong>
-      <img src="assets/img/like.png" class="rounded mr-2" alt="...">
-    </div>
-  </div>
   <!-- diplom img zoom -->
   <div>
     <img id='diplom-zoom' class='diplom-zoom' src='assets/img/diplom.jpg'>
@@ -201,7 +141,7 @@
           <a href="http://new.bak.lviv.ua" target="blanc"><img src="assets/img/project01.jpg" alt="">
           </a>
           <span>PHP, MySQL, JS, SASS</span>
-          <span>Замовник: видавництво "БаК", м.Львів. Задача: переробити старий сайт на WP у сучасний web-додаток із збереженням існуючої бази. Виконано: розроблена нов структура БД, старі дані конвертовані у нову БД, розроблено backend та frontend, CMS-подібну адмін частину, авторизацію корисувачів, дизайн та верстку.</span>
+          <span>Замовник: видавництво "БаК", м.Львів. Задача: переробити старий сайт на WP у сучасний web-додаток із збереженням існуючої бази. Виконано: розроблена нова структура БД, дані конвертовані у нову БД, розроблено backend та frontend, CMS-подібну адмін частину з можливостю редагування контенту, менеджером фото, авторизацією корисувачів.</span>
         </div>
         <div class="projects-item">
           <a href="http://explorer.org.ua/wine" target="blanc"><img src="assets/img/project02.jpg" alt="">
@@ -306,8 +246,69 @@
     </div>
     <div class="row">
       <div class="col-12 py-4 d-flex justify-content-center">
-        <button type="button" class="btn btn-warning mx-1" data-toggle="modal" data-target="#invite">Запросити на співбесіду</button>
-        <button type="button" class="btn btn-info mx-1" data-target="#feedback" data-toggle="modal" data-toggle="tooltip" data-placement="bottom" title="Якщо Ви не готові запросити мене на співбесіду, буду вдячний за feedback">Зворотній зв'язок</button>
+        <button type="button" class="btn btn-warning mx-1" data-toggle="modal" data-target="#invite">
+          Запросити на співбесіду
+        </button>
+      </div>
+    </div>
+    <!-- pop-up invite -->
+    <div class="row">
+        <div id="popup-invite" class="toast" data-delay="2000">
+          <div class="toast-header">
+            <strong class="mr-auto">
+              Запрошення надіслане. Дякую!
+            </strong>
+            <img src="assets/img/like.png" class="rounded mr-2" alt="...">
+          </div>
+      </div>
+    </div>
+    <div class="separator-horizontal"></div>
+    <p>Якщо Ви й досі не зацікавлені у співпраці зі мною, будь ласка - зазначте причини у формі нижче. Це не відбере багато Вашого часу, а мені надасть найціннішу інформацію - в якому напрямку мені слід розвиватись.</p>
+      <div class="row">
+      <div class="col-12 py-4 d-flex justify-content-center">
+        <form name="formfeedback">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Ваша компанія:" name="company">
+          </div>
+          <div class="form-group">
+            <label class="form-check-label" >
+              <input class="form-check-input" type="checkbox" data-value="Common experience" id="defaultCheck1">
+              Бракує досвіду роботи в it компанії
+            </label>
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" data-value="Framework" id="defaultCheck1">
+              Бракує знань React JS (Vue JS)
+            </label>
+            <label class="form-check-label" >
+              <input class="form-check-input" type="checkbox" data-value="Webpack" id="defaultCheck1">
+              Бракує досвіду роботи з Webpack (Gulp)
+            </label>
+            <label class="form-check-label" >
+              <input class="form-check-input" type="checkbox" data-value="English" id="defaultCheck1">
+              Бракує знань English (A2 level)
+            </label>
+            <label class="form-check-label" >
+              <input class="form-check-input" type="checkbox" data-value="CMS" id="defaultCheck1">
+              Бракує досвіду роботи з CMS (WP, Opencart)
+            </label>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Додатково:" name="text"></textarea>
+          </div>
+          <button type="button" class="btn btn-info mx-1" id="feedback-btn" data-placement="bottom">
+            Надіслати відмову
+          </button>
+          <div>
+            <div id="popup-feedback" class="toast" data-delay="2000">
+              <div class="toast-header">
+                <strong class="mr-auto">
+                  Дякую за відповідь!
+                </strong>
+                <img src="assets/img/like.png" class="rounded mr-2" alt="...">
+              </div>
+            </div>
+          </div>
+          </form>
       </div>
     </div>
   </main>
@@ -386,7 +387,7 @@
       });
       msg += document.forms.formfeedback.text.value;
       sendMail ('vitaljan@gmail.com', '-CV-', msg, 'explorer.org.ua/cv', (res)=>{
-        if (res.send) $("#popup-invite").toast('show');
+        if (res.send) $("#popup-feedback").toast('show');
       }, 'api/');
     })
     // diplom collapse
